@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Switch
+        android:id="@+id/sw"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/rg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/whiterb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <RadioButton
+            android:id="@+id/whiterb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="whiteclicked"
+            android:text="white" />
+
+        <RadioButton
+            android:id="@+id/bluerb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="blueclicked"
+            android:text="blue" />
+
+        <RadioButton
+            android:id="@+id/redrb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="redclicked"
+            android:text="red" />
+
+        <RadioButton
+            android:id="@+id/greenrb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="greenclicked"
+            android:text="green" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="changeclicked"
+        android:text="change"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg" />
+</androidx.constraintlayout.widget.ConstraintLayout>
